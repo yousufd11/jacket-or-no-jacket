@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f1ede4; color: #292923; font-family: Arial, sans-serif; transition: background 0.8s; }
+body.cold { background: #dce7ed; }
+body.mild { background: #e7ebdc; }
+body.warm { background: #f5dfc2; }
+main { width: min(740px, 100%); margin: auto; padding: 40px 26px; }
+header { display: flex; justify-content: space-between; gap: 20px; font-size: 11px; letter-spacing: 1.6px; }
+h1 { font-family: Georgia, serif; font-weight: normal; font-size: clamp(58px, 11vw, 94px); line-height: .98; letter-spacing: -3px; margin: 48px 0 20px; }
+.intro { color: #51544c; font-size: 17px; margin-bottom: 32px; }
+.controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+label { width: 100%; font-size: 13px; }
+select, button { font: inherit; padding: 12px 16px; border: 1px solid #55594f; border-radius: 3px; }
+select { background: transparent; color: inherit; }
+button { background: #30382c; color: #fff; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+:focus-visible { outline: 3px solid #9a4c17; outline-offset: 4px; }
+#result { margin-top: 30px; border-top: 1px solid #92988b; border-bottom: 1px solid #92988b; padding: 22px 0; }
+.weather { display: flex; align-items: center; gap: 20px; }
+#symbol { font-size: 62px; display: inline-block; animation: sway 3s ease-in-out infinite alternate; }
+#temperature { font-size: 58px; margin: 0; letter-spacing: -2px; }
+#advice { font-size: 27px; font-weight: bold; margin: 17px 0 8px; }
+#detail { margin: 0; line-height: 1.5; }
+.facts { display: flex; gap: 35px; flex-wrap: wrap; margin-top: 23px; }
+.facts p { font-size: 10px; letter-spacing: 1px; margin: 0; }
+strong { display: block; font-size: 19px; letter-spacing: 0; margin-top: 7px; font-weight: normal; }
+#status, footer { font-size: 12px; line-height: 1.7; color: #50544c; }
+footer { margin-top: 24px; }
+a { color: inherit; }
+@keyframes sway { to { transform: translateX(7px) rotate(7deg); } }
+@media (max-width: 480px) { main { padding: 26px 22px; } header { font-size: 9px; } h1 { margin-top: 35px; } .facts { gap: 24px; } }
+@media (prefers-reduced-motion: reduce) { #symbol { animation: none; } body { transition: none; } }
