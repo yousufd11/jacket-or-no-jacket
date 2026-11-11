@@ -3,28 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jacket or no jacket?</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <title>Tea by the window</title>
+  <link rel="stylesheet" href="style.css?v=tea">
+  <script src="script.js?v=tea" defer></script>
 </head>
 <body>
   <main>
-    <header><span>BEFORE I HEAD OUT</span><span>MOSUL / TORONTO</span></header>
-    <h1>Jacket or<br>no jacket?</h1>
-    <p class="intro">I always check the weather after I get dressed.</p>
+    <header>A LITTLE BREAK <span>MOSUL / TORONTO</span></header>
+    <h1>Tea by the window.</h1>
+    <p class="intro">Same tea. Different view.</p>
     <div class="controls">
-      <label for="city">Where am I going?</label>
-      <select id="city"><option value="mosul">Mosul, Iraq</option><option value="toronto">Toronto, Canada</option></select>
-      <button id="refresh">Check again</button>
+      <label for="city">Look outside in</label>
+      <select id="city"><option value="mosul">Mosul</option><option value="toronto">Toronto</option></select>
+      <button id="refresh">Check outside</button>
     </div>
+    <div id="scene" role="img" aria-label="A glass of tea on a windowsill. Waiting for weather.">
+      <div class="sky"><div class="sun"></div><div class="cloud"></div><div class="buildings"></div><div class="rain"></div></div>
+      <div class="frame"></div>
+      <div class="tea"><div class="steam"><i></i><i></i><i></i></div><div class="glass"><div class="drink"></div></div><div class="saucer"></div></div>
+      <span class="scene-note" id="scene-note">Checking the view…</span>
+    </div>
+    <button id="window" aria-pressed="false">Open the window</button>
     <section id="result" aria-live="polite" aria-busy="true">
-      <div class="weather"><span id="symbol" aria-hidden="true">…</span><p id="temperature">—</p></div>
-      <p id="advice">Checking outside…</p>
-      <p id="detail">Getting the latest weather.</p>
-      <div class="facts"><p>FEELS LIKE <strong id="feels">—</strong></p><p>WIND <strong id="wind">—</strong></p><p>RAIN / SNOW <strong id="rain">—</strong></p></div>
+      <h2 id="thought">One second…</h2>
+      <p id="detail">Getting the weather.</p>
+      <div class="facts"><p>OUTSIDE <strong id="temperature">—</strong></p><p>WIND <strong id="wind">—</strong></p><p>CLOUD COVER <strong id="clouds">—</strong></p></div>
     </section>
     <p id="status" role="status">Loading weather…</p>
-    <footer>Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>. Model estimates, refreshed every 5 minutes.<br>Just my jacket rule: below 12°C, jacket. Below 20°C, hoodie. Otherwise, no jacket.</footer>
+    <footer>Weather by <a href="https://open-meteo.com/">Open-Meteo</a>. Model estimates, checked every 5 minutes.<br>The view follows the weather. The tea is just here for company.</footer>
   </main>
 </body>
 </html>
